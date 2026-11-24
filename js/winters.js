@@ -1,7 +1,7 @@
 // alert("Let it snow, let it snow, let it snow! ☃️");
 
 // ADD YOUR ARRAY OF WORDS HERE
-var words = ["Candy Cane", "Santa", "Snow","December", "Christmas", "Frosty the Snowman", "Hot Coco", "Snowflake"];
+var words = ["Candy Cane", "Santa", "Snow","December", "Christmas", "Frosty the Snowman", "Hot Coco", "Snowflake", "Saint Nick", "Gingerbread", "Custard", "Stockings"];
 
 var snowmanParts = [".hat", ".face", ".scarf", ".hands", ".body-top", ".body-middle", ".body-bottom"];
 var randomWord = getRandomWord(words);
@@ -20,11 +20,30 @@ function handleKeyboardClick(event){
   var clickedLetter = clickedElement.textContent;
   var hasMatch = checkForMatch(clickedLetter);
 
+//CHECK THIS
+
+ function checkForLoser () {
+
+    if (snowmanParts.length === 0) {
+        var replace = docuement.querySelector("#snowman-container");
+        replace.innerHTML = "<h2>You lost, game over!</h2>"
+        keyboardContainer.innerHTML = "<h2>The word was:"+ randomWord.value + "</h2>";
+    }
+  }
+ 
+  function checkForWinner () {
+    var hiddenLetterElements = document.querySelectorAll(".hidden");
+    if (hiddenLetterElements.length === 0) {
+        keyboardContainer.innerHTML = "<h2>You Win!</h2>"
+    }
+  }
+
   if (!hasMatch) {
     // What function do we call??
-    checkForLoser();
+    checkForWinner();
   } else {
     // What function do we call??
+    checkForLoser();
   }
 }
 
@@ -34,7 +53,7 @@ function checkForMatch(clickedLetter) {
  
  hiddenLetterElements.forEach(hiddenLetterElement => {
   var hiddenLetter = hiddenLetterElement.textContent;
-  // console.log(hiddenLetter, clickedLetter)
+  console.log(hiddenLetter, clickedLetter)
     if (hiddenLetter === clickedLetter) {
       hiddenLetterElement.classList.remove("hidden");
       hasMatch = true;
@@ -77,7 +96,12 @@ function getRandomWord(words) {
 // CHECK FOR LOSER FUNCTION HERE
 
 
+// console.log(checkForLoser());
+
+
 // CHECK FOR WINNER FUNCTION HERE
+// console.log(checkForWinner());
+ 
 
 
 
