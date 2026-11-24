@@ -1,5 +1,7 @@
 // alert("Let it snow, let it snow, let it snow! ☃️");
 
+// ADD YOUR ARRAY OF WORDS HERE
+var words = ["Candy Cane", "Santa", "Snow","December", "Christmas", "Frosty the Snowman", "Hot Coco", "Snowflake"];
 
 var snowmanParts = [".hat", ".face", ".scarf", ".hands", ".body-top", ".body-middle", ".body-bottom"];
 var randomWord = getRandomWord(words);
@@ -76,4 +78,7 @@ function getRandomWord(words) {
 
 
 // CHECK FOR WINNER FUNCTION HERE
+
+
+
 
