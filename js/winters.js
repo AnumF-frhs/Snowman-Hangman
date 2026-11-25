@@ -28,7 +28,7 @@ function handleKeyboardClick(event){
     if (snowmanParts.length === 0) {
         let replace = document.querySelector("#snowman-container");
         replace.innerHTML = "<h2>You lost, game over!</h2>"
-        keyboardContainer.innerHTML = "<h2>The word was:" +" "+ randomWord.value + "</h2>";
+        keyboardContainer.innerHTML = "<h2>The word was:" +" "+ randomWord + "</h2>";
         
     }
   }
@@ -100,12 +100,12 @@ function getRandomWord(words) {
 // CHECK FOR LOSER FUNCTION HERE
 
 // checkForLoser();
-//  console.log(checkForLoser());
+ console.log(checkForLoser());
 
 
 // // CHECK FOR WINNER FUNCTION HERE
 // checkForWinner();
-// console.log(checkForWinner());
+console.log(checkForWinner());
  
 
 
