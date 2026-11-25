@@ -1,7 +1,7 @@
 // alert("Let it snow, let it snow, let it snow! ☃️");
 
 // ADD YOUR ARRAY OF WORDS HERE
-const words = ["Candy Cane", "Santa", "Snow","December", "Christmas", "Frosty", "Hot Coco", "Snowflake", "Saint Nick", "Gingerbread", "Custard", "Stockings"];
+const words = ["CANES", "SANTA", "SNOW","DECEMBER", "CHRISTMAS", "FROSTY", "SNOWFLAKE", "JESUS", "GINGERBREAD", "CUSTARD", "STOCKINGS"];
 
 var snowmanParts = [".hat", ".face", ".scarf", ".hands", ".body-top", ".body-middle", ".body-bottom"];
 var randomWord = getRandomWord(words);
@@ -28,7 +28,7 @@ function handleKeyboardClick(event){
     if (snowmanParts.length === 0) {
         let replace = document.querySelector("#snowman-container");
         replace.innerHTML = "<h2>You lost, game over!</h2>"
-        keyboardContainer.innerHTML = "<h2>The word was:"+ randomWord.value + "</h2>";
+        keyboardContainer.innerHTML = "<h2>The word was:" +" "+ randomWord.value + "</h2>";
         
     }
   }
