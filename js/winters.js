@@ -1,7 +1,7 @@
 // alert("Let it snow, let it snow, let it snow! ☃️");
 
 // ADD YOUR ARRAY OF WORDS HERE
-var words = ["Candy Cane", "Santa", "Snow","December", "Christmas", "Frosty the Snowman", "Hot Coco", "Snowflake", "Saint Nick", "Gingerbread", "Custard", "Stockings"];
+const words = ["Candy Cane", "Santa", "Snow","December", "Christmas", "Frosty", "Hot Coco", "Snowflake", "Saint Nick", "Gingerbread", "Custard", "Stockings"];
 
 var snowmanParts = [".hat", ".face", ".scarf", ".hands", ".body-top", ".body-middle", ".body-bottom"];
 var randomWord = getRandomWord(words);
@@ -22,10 +22,11 @@ function handleKeyboardClick(event){
 
 //CHECK THIS
 
+
  function checkForLoser () {
 
     if (snowmanParts.length === 0) {
-        var replace = document.querySelector("#snowman-container");
+        let replace = document.querySelector("#snowman-container");
         replace.innerHTML = "<h2>You lost, game over!</h2>"
         keyboardContainer.innerHTML = "<h2>The word was:"+ randomWord.value + "</h2>";
         
@@ -33,7 +34,7 @@ function handleKeyboardClick(event){
   }
  
   function checkForWinner () {
-    var hiddenLetterElements = document.querySelectorAll(".hidden");
+    let hiddenLetterElements = document.querySelectorAll(".hidden");
     if (hiddenLetterElements.length === 0) {
         keyboardContainer.innerHTML = "<h2>You Win!</h2>"
     }
@@ -41,10 +42,12 @@ function handleKeyboardClick(event){
 
   if (!hasMatch) {
     // What function do we call??
-    checkForWinner();
+    removeSnowmanPart();
+    console.log(checkForLoser());
   } else {
     // What function do we call??
-    checkForLoser();
+
+    console.log(checkForWinner());
   }
 }
 
